@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "competition": "J1 League",
+    "date": "2025-03-15T14:00:00Z",
+    "home": {
+      "name": "Hokkaido Consadole Sapporo",
+      "logo": "🔵",
+      "color": "#1e3a8a"
+    },
+    "away": {
+      "name": "Niigata Hollyhock",
+      "logo": "🟡",
+      "color": "#991b1b"
+    },
+    "score": { "home": 2, "away": 1 },
+    "status": "Live",
+    "minute": 65,
+    "tvChannels": ["TV Asahi", "Fuji Sports"],
+    "odds": { "home": 2.1, "draw": 3.0, "away": 3.5 },
+    "stats": {
+      "possession": { "home": 58, "away": 42 },
+      "shots": { "home": 12, "away": 8 },
+      "shotsOnTarget": { "home": 5, "away": 3 }
+    }
+  },
+  {
+    "id": 2,
+    "competition": "J1 League",
+    "date": "2025-03-15T16:30:00Z",
+    "home": {
+      "name": "Urawa Reds",
+      "logo": "🔴",
+      "color": "#dc2626"
+    },
+    "away": {
+      "name": "Nagoya Grampus",
+      "logo": "🟠",
+      "color": "#ea580c"
+    },
+    "score": { "home": 1, "away": 1 },
+    "status": "Live",
+    "minute": 42,
+    "tvChannels": ["NHK", "DAZN"],
+    "odds": { "home": 1.95, "draw": 3.2, "away": 3.8 },
+    "stats": {
+      "possession": { "home": 52, "away": 48 },
+      "shots": { "home": 9, "away": 7 },
+      "shotsOnTarget": { "home": 3, "away": 2 }
+    }
+  },
+  {
+    "id": 3,
+    "competition": "J1 League",
+    "date": "2025-03-15T18:00:00Z",
+    "home": {
+      "name": "FC Tokyo",
+      "logo": "⚪",
+      "color": "#1f2937"
+    },
+    "away": {
+      "name": "Kawasaki Frontale",
+      "logo": "🔵",
+      "color": "#0369a1"
+    },
+    "score": { "home": 0, "away": 0 },
+    "status": "Scheduled",
+    "minute": 0,
+    "tvChannels": ["TV Tokyo", "WOWOW"],
+    "odds": { "home": 2.3, "draw": 3.1, "away": 3.2 },
+    "stats": {
+      "possession": { "home": 0, "away": 0 },
+      "shots": { "home": 0, "away": 0 },
+      "shotsOnTarget": { "home": 0, "away": 0 }
+    }
+  },
+  {
+    "id": 4,
+    "competition": "Premier League",
+    "date": "2025-03-15T20:00:00Z",
+    "home": {
+      "name": "Manchester United",
+      "logo": "🔴",
+      "color": "#c41e3a"
+    },
+    "away": {
+      "name": "Liverpool FC",
+      "logo": "🔴",
+      "color": "#c8102e"
+    },
+    "score": { "home": 0, "away": 0 },
+    "status": "Scheduled",
+    "minute": 0,
+    "tvChannels": ["Sky Sports", "BT Sport"],
+    "odds": { "home": 2.0, "draw": 3.4, "away": 3.6 },
+    "stats": {
+      "possession": { "home": 0, "away": 0 },
+      "shots": { "home": 0, "away": 0 },
+      "shotsOnTarget": { "home": 0, "away": 0 }
+    }
+  },
+  {
+    "id": 5,
+    "competition": "La Liga",
+    "date": "2025-03-16T15:00:00Z",
+    "home": {
+      "name": "Real Madrid",
+      "logo": "⚪",
+      "color": "#ffffff"
+    },
+    "away": {
+      "name": "FC Barcelona",
+      "logo": "🔵",
+      "color": "#004687"
+    },
+    "score": { "home": 0, "away": 0 },
+    "status": "Scheduled",
+    "minute": 0,
+    "tvChannels": ["ESPN+", "DAZN"],
+    "odds": { "home": 1.85, "draw": 3.5, "away": 4.2 },
+    "stats": {
+      "possession": { "home": 0, "away": 0 },
+      "shots": { "home": 0, "away": 0 },
+      "shotsOnTarget": { "home": 0, "away": 0 }
+    }
+  },
+  {
+    "id": 6,
+    "competition": "Serie A",
+    "date": "2025-03-16T18:00:00Z",
+    "home": {
+      "name": "Juventus",
+      "logo": "⚫",
+      "color": "#000000"
+    },
+    "away": {
+      "name": "AC Milan",
+      "logo": "🔴",
+      "color": "#c60c30"
+    },
+    "score": { "home": 3, "away": 2 },
+    "status": "Live",
+    "minute": 78,
+    "tvChannels": ["Sky Italia", "DAZN"],
+    "odds": { "home": 1.9, "draw": 3.3, "away": 4.0 },
+    "stats": {
+      "possession": { "home": 61, "away": 39 },
+      "shots": { "home": 14, "away": 9 },
+      "shotsOnTarget": { "home": 6, "away": 4 }
+    }
+  }
+]
