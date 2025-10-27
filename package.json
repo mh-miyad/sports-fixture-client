@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "build": "next build --turbopack",
+    "dev": "next dev --turbopack",
     "lint": "next lint",
     "start": "next start"
   },
@@ -12,6 +12,7 @@
     "@emotion/is-prop-valid": "latest",
     "@radix-ui/react-select": "latest",
     "@radix-ui/react-slot": "latest",
+    "@tailwindcss/postcss": "^4.1.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "latest",
