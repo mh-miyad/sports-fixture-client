@@ -10,9 +10,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Live Events - Fixture Calendar",
+  title: "Live Events - Sports Fixture",
   description: "Watch live sports events and fixtures in real-time",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({

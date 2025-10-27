@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Menu, MapPin, LogIn } from "lucide-react"
+import { Menu, MapPin, LogIn, Zap } from "lucide-react"
 import { useState } from "react"
 
 export function Header() {
@@ -13,8 +13,10 @@ export function Header() {
       <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center font-bold text-primary">F</div>
-          <span className="font-bold text-lg hidden sm:inline">LIVE EVENTS</span>
+          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center font-bold text-primary">
+            <Zap className="w-5 h-5" />
+          </div>
+          <span className="font-bold text-lg hidden sm:inline">SPORTS FIXTURE</span>
         </motion.div>
 
         {/* Desktop Navigation */}

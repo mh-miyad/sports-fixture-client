@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Instagram, Facebook, Linkedin } from "lucide-react"
+import { Mail, Instagram, Facebook, Linkedin, Zap, Apple, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
@@ -17,13 +17,11 @@ export function Footer() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-bold text-primary">
-                F
+                <Zap className="w-6 h-6" />
               </div>
-              <span className="font-bold text-lg">FIXTURE CALENDAR</span>
+              <span className="font-bold text-lg">SPORTS FIXTURE</span>
             </div>
-            <p className="text-sm text-primary-foreground/70">
-              © 2018 - 2025 Fixture Calendar Ltd, all rights reserved
-            </p>
+            <p className="text-sm text-primary-foreground/70">© 2018 - 2025 Sports Fixture Ltd, all rights reserved</p>
           </motion.div>
 
           {/* App Store Badges */}
@@ -36,11 +34,11 @@ export function Footer() {
             <p className="font-semibold mb-4 text-sm">Download App</p>
             <div className="space-y-2">
               <div className="border border-primary-foreground/30 rounded-lg px-3 py-2 text-sm flex items-center gap-2 hover:bg-primary-foreground/10 transition-colors cursor-pointer">
-                <span>🍎</span>
+                <Apple className="w-4 h-4" />
                 <span>App Store</span>
               </div>
               <div className="border border-primary-foreground/30 rounded-lg px-3 py-2 text-sm flex items-center gap-2 hover:bg-primary-foreground/10 transition-colors cursor-pointer">
-                <span>🎮</span>
+                <Play className="w-4 h-4" />
                 <span>Google Play</span>
               </div>
             </div>
