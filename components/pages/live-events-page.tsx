@@ -45,86 +45,89 @@ export function LiveEventsPage() {
         </div>
 
         {/* Main Content */}
-        <main className="flex-1 p-4 sm:p-6 lg:p-8">
-          {/* Results Info */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
-          >
-            <div>
-              <p className="text-sm font-medium text-foreground">{filteredEvents.length} results match your search</p>
-              <p className="text-xs text-muted-foreground mt-1">(Home team first)</p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-3 bg-card border border-border rounded-lg p-2">
-                <Clock className="w-4 h-4 text-muted-foreground" />
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="time"
-                    checked={timeFormat === "local"}
-                    onChange={() => setTimeFormat("local")}
-                    className="w-4 h-4"
-                  />
-                  <span className="text-sm font-medium">Local Time</span>
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="time"
-                    checked={timeFormat === "your"}
-                    onChange={() => setTimeFormat("your")}
-                    className="w-4 h-4"
-                  />
-                  <span className="text-sm font-medium">Your Time</span>
-                </label>
+        <main className="flex-1 w-full overflow-x-hidden">
+          <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto w-full">
+            {/* Results Info */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
+            >
+              <div>
+                <p className="text-sm font-medium text-foreground">{filteredEvents.length} results match your search</p>
+                <p className="text-xs text-muted-foreground mt-1">(Home team first)</p>
               </div>
-            </div>
-          </motion.div>
 
-          {/* Date Navigator */}
-          <DateNavigator />
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 bg-card border border-border rounded-lg p-2">
+                  <Clock className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="time"
+                      checked={timeFormat === "local"}
+                      onChange={() => setTimeFormat("local")}
+                      className="w-4 h-4"
+                    />
+                    <span className="text-sm font-medium whitespace-nowrap">Local Time</span>
+                  </label>
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="time"
+                      checked={timeFormat === "your"}
+                      onChange={() => setTimeFormat("your")}
+                      className="w-4 h-4"
+                    />
+                    <span className="text-sm font-medium whitespace-nowrap">Your Time</span>
+                  </label>
+                </div>
+              </div>
+            </motion.div>
 
-          {/* Filter Tabs */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-2 mb-6 flex-wrap">
-            {(["all", "live", "scheduled"] as const).map((f) => (
-              <motion.button
-                key={f}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setFilter(f)}
-                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
-                  filter === f
-                    ? "bg-primary text-primary-foreground shadow-md"
-                    : "bg-card text-foreground border border-border hover:border-accent"
-                }`}
-              >
-                {f === "all" ? "All Events" : f === "live" ? "Live Now" : "Scheduled"}
-              </motion.button>
-            ))}
-          </motion.div>
+            {/* Date Navigator */}
+            <DateNavigator />
 
-          {/* Events List */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4">
-            {filteredEvents.length > 0 ? (
-              filteredEvents.map((event, idx) => (
-                <motion.div
-                  key={event.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
+            {/* Filter Tabs */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-2 mb-6 flex-wrap">
+              {(["all", "live", "scheduled"] as const).map((f) => (
+                <motion.button
+                  key={f}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setFilter(f)}
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+                    filter === f
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "bg-card text-foreground border border-border hover:border-accent"
+                  }`}
                 >
-                  <EventCardFixture event={event} />
+                  {f === "all" ? "All Events" : f === "live" ? "Live Now" : "Scheduled"}
+                </motion.button>
+              ))}
+            </motion.div>
+
+            {/* Events List */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4 w-full">
+              {filteredEvents.length > 0 ? (
+                filteredEvents.map((event, idx) => (
+                  <motion.div
+                    key={event.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="w-full"
+                  >
+                    <EventCardFixture event={event} />
+                  </motion.div>
+                ))
+              ) : (
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12">
+                  <p className="text-muted-foreground">No events found for the selected filter.</p>
                 </motion.div>
-              ))
-            ) : (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12">
-                <p className="text-muted-foreground">No events found for the selected filter.</p>
-              </motion.div>
-            )}
-          </motion.div>
+              )}
+            </motion.div>
+          </div>
         </main>
       </div>
 
